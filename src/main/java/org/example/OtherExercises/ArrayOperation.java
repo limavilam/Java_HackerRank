@@ -1,4 +1,4 @@
-package org.example;
+package org.example.OtherExercises;
 
 public class ArrayOperation {
     public static class Pair {

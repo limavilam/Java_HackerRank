@@ -1,4 +1,4 @@
-package org.example;
+package org.example.OtherExercises;
 
 //Welcome to the world of Java! In this challenge, we practice printing to stdout.
 //

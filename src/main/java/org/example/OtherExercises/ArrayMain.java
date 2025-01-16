@@ -1,4 +1,4 @@
-package org.example;
+package org.example.OtherExercises;
 
 class ArrayMain {
     public static void main(String args[]) {

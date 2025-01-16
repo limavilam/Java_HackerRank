@@ -1,4 +1,4 @@
-package org.example;
+package org.example.OtherExercises;
 
 class BoxPrinter<T> {
     private T val;

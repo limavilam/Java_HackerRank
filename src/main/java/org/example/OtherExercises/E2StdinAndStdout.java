@@ -1,4 +1,4 @@
-package org.example;
+package org.example.OtherExercises;
 
 //Most HackerRank challenges require you to read input from stdin (standard input) and write output to stdout (standard output).
 //

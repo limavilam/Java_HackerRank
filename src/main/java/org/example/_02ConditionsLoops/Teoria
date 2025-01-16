@@ -1,0 +1,57 @@
+
+CONDITIONAL
+
+if (conditional expression) {
+    statements
+}
+
+if (conditional expression1){
+    statements
+}else if (conditional expression2){
+    statements
+}else if (conditional expression3){
+    statements
+}else {
+    statements
+}
+
+switch(expression) {
+    case key1:
+        statements if the expression value matches key1
+        break;
+    case key2:
+        statements if the expression value matches key2
+        break;
+        ...
+    default:
+        statements
+ }
+
+LOOPS
+
+WHILE: Podría no ejecutarse ni una vez
+
+while  (conditional expression) {
+    statements
+}
+
+DO-WHILE: Se ejecuta al menos una vez
+do  {
+    statements
+}while (conditional expression);
+
+FOR: exp1_valor inicial del loop, exp2_condicion para ejecutar el loop, exp3_la regla para el
+cambio de la variable del loop, incrementa o decrementa.
+
+for (exp1; boolean_exp2;exp3) {
+    statements
+}
+
+OJO:Puede hacerse con múltiples variables
+
+int sum = 0;
+for (int val = 1; val <= 10; val++) {
+    sum += val;
+}
+System.out.println("Sum of numbers 1..10 = " + sum); Respuesta_55
+
