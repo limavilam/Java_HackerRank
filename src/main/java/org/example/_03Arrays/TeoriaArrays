@@ -1,0 +1,258 @@
+
+En java un arrays son implementados como objetos.
+
+Una matriz en JAVA es un objeto contenedor que tiene un número fijo de celdas para almacenar
+datos/valores de un tipo.
+
+Para crear un arreglo:
+
+1. Declarar el arreglo
+2. Asignarlo en memoria
+3. Inicializar el arreglo
+
+1. Así se puede declarar un arreglo:
+
+<data type> <Nombre> [];
+Square brackets mean that the data belong to the arrays class.
+<Nombre>[] <data type>;
+
+Las matrices pueden contener elementos de tipos de datos primitivos y tipos de referencia.
+Cuando se declara una matriz, solo se crea una referencia a la matriz; no se asigna memoria
+para la matriz.
+
+2. Asignarlo en memoria: Significa reservar un tamaño fijo en el bloque de memoria de "heap".
+
+<Nombre> = new <data type>[];
+
+3. Inicializar un array significa escribir datos en las celdas de la matriz.
+Se inicializa de dos maneras:
+
+- Accediendo a cada elemento de la matriz y especificar su índice uno por uno.
+- Iterar a través de los elementos usando bucles.
+
+Metodo de uno por uno:
+
+int[] array = new int[3];
+array[0] = A
+array[1] = B
+array[2] = C
+
+Método iterando:
+
+int[] arrayNumber = new int[10];
+int i = 0;
+while (i<10){
+    arrayNumber[i] = i;
+    i++;
+}
+while (i < 10) {
+    System.out.println((i+1) + "th array element = " + numberArray[i]);
+    i++;
+}
+
+Inicialiadores de matrices
+int[] сolor = {255, 126, 255};
+
+La palabra clave new está ausente.
+Los valores iniciales de los elementos de la matriz se enumeran entre corchetes como expresiones literales.
+La longitud (tamaño) de la matriz está determinada por el número de expresiones literales enumeradas.
+Cuando se crea una matriz de dimensión cero, los corchetes curvos se dejan vacíos.
+
+MATRICES ANÓNIMAS
+
+Puedo crear un arreglo sin especificar su nombre y longitud.
+
+Ej: new <type>[] {<literal expression>,<literal expression>,...,};
+Al usar este método, se creará una matriz cuya longitud depende
+del número de expresiones literales enumeradas.
+
+Las matrices anónimas se utilizan cuando se crea una matriz en un lugar y
+luego debe transferirse a otra parte del programa para su procesamiento.
+
+LENGTH AND COPYING OF ARRAYS
+
+Utilice la propiedad length para controlar el acceso a los elementos de una matriz.
+Esto ayuda a evitar ir más allá de sus límites.
+
+Length of an array (or the number of elements) is stored in its properties.
+
+int[] numbers = {-9, 6, 0, -59};
+int num = numbers.length;
+System.out.println(num); o solo podría:
+System.out.println(numbers.length);
+
+Si intenta acceder a un elemento de una matriz que va más allá de su
+rango [0, arrayName.length-1], Java lanzará el errorArrayIndexOutOfBoundException al ejecutar
+el programa.
+
+LOOPING STATEMENTS FOR AND FOR-EACH: WORKING WITH ARRAY ELEMENTS.
+
+FOR
+
+class ArrayMain {
+    public static void main(String[] args) {
+        int[] array;
+        int[] arrayInt = new int[100];
+        int[] amountDays = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        System.out.println("April has " + amountDays[3] + " days");
+
+        //Recorre cada índice del arreglo de amoutnDays, inicia con el índice actual del ciclo
+
+        for (int i = 0; i < amountDays.length; i++) {
+
+        //Se verifica si el valor en la posición i de amountDays es menor a 31
+
+            if (amountDays[i] < 31) {
+
+            //Si es verdadera el valor de la posición i del arreglo amountDays se reemplaza con 0.
+
+                amountDays[i] = 0;
+            }
+            //Independientemente de si el valor fue modificado o no en el paso anterior, el valor
+             actual en amountDays[i] se copia al arreglo arrayInt en la posición correspondiente
+              (i).
+            arrayInt[i] = amountDays[i];
+        }
+        array = amountDays;
+    }
+}
+
+Después de ejecutar el código:
+
+Iteración 1 (i = 0):
+amountDays[0] = 28 → Menor que 31, se convierte en 0.
+arrayInt[0] = 0.
+Iteración 2 (i = 1):
+amountDays[1] = 31 → No menor que 31, permanece igual.
+arrayInt[1] = 31.
+Iteración 3 (i = 2):
+amountDays[2] = 30 → Menor que 31, se convierte en 0.
+arrayInt[2] = 0.
+Iteración 4 (i = 3):
+amountDays[3] = 29 → Menor que 31, se convierte en 0.
+arrayInt[3] = 0.
+
+FOR EACH
+
+For-each está diseñado para una ejecución secuencial estricta de declaraciones de bucle
+para todos los elementos de un conjunto de datos, como una matriz.
+
+Sintaxis:
+TIP: El tipo de variable de iteración debe coincidir con el tipo de elementos de la matriz.
+
+for (<type> <iteration variable> : <array>){
+    statements
+}
+Detalles:
+Durante cada iteración del bucle se guarda una copia de valor de un elemento de matriz en su
+variable iterativa, el bucle ejcuta hasta que se han procesado todos los elementos del conjunto
+de datos, sin embargo es posible terminarlo con un break.
+Se utiliza exclusivamente para iterar a través de los valores y no para otras operaciones
+(por ejemplo, para eliminar o editar elementos de la matriz).
+
+
+MATRICES BIDIMENSIONALES
+
+En java, matrices multidimensionales son arreglos de arreglos, es decir, conjuntos de matrices
+unidimensionales.
+
+Ejemplo:
+int[][] multiplicationTable = new int[5][];
+System.out.println("multiplicationTable = " + multiplicationTable );
+for (int i = 0; i < multiplicationTable.length; i++) {
+    System.out.println("multiplicationTable[" + i + "] = " + multiplicationTable[i]);
+}
+System.out.println("\nCreate array");
+for (int i = 0; i < multiplicationTable.length; i++) {
+    multiplicationTable[i] = new int[5];
+    System.out.println("multiplicationTable[" + i + "] = " + multiplicationTable[i]);
+}
+System.out.println("\nInitialization array");
+for (int i = 0; i < multiplicationTable.length; i++) {
+    for (int j = 0; j < multiplicationTable[i].length; j++) {
+        System.out.print(" " + multiplicationTable[i][j]);
+    }
+    System.out.println();
+}
+
+salida
+
+Tabla de multiplicación = [[I@14991ad
+Tabla de multiplicación[0] = nulo
+Tabla de multiplicación[1] = nulo
+Tabla de multiplicación[2] = nulo
+Tabla de multiplicación[3] = nulo
+Tabla de multiplicación[4] = nulo
+
+Crear matriz
+
+Tabla de multiplicación[0] = [I@d93b30
+Tabla de multiplicación[1] = [I@16d3586
+Tabla de multiplicación[2] = [I@154617c
+Tabla de multiplicación[3] = [I@a14482
+Tabla de multiplicación[4] = [I@140e19d
+
+Inicializar matriz
+
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+Sintaxis :
+
+int [] [] twoD = new int [4][5]
+
+                                [ ][ ][ ][ ][ ]
+                                [ ][ ][ ][ ][ ]
+                                [ ][ ][ ][ ][ ]
+                                [ ][ ][ ][ ][ ]
+
+Esto es como describir una tabla donde la primera dimensión determina el número de líneas y la
+segunda el número de columnas. Por lo tanto para acceder a un elemento de una matriz bidimensional
+se deben especificar dos índices: un número de línea y un número de columna.
+
+Es importante entender que en las matrices multidimensionales, solo el último nivel de indexación
+(el índice más a la derecha) indica directamente el elemento del tipo de datos declarado de
+la matriz. Los otros índices solo contienen referencias a matrices.
+
+Esto esta mal: Revise una descripción de una matriz bidimensional que especifique
+solo la primera dimensión (es decir, se crea una matriz de referencias).
+Al intentar escribir un valor entero en la matriz de referencias, se obtiene un error de
+compilación.
+
+En este caso, tendrá un error ya que este elemento de matriz almacena una referencia a
+una matriz del tipo int y no a un valor del tipo int. Estos son diferentes tipos de datos.
+
+int[][] array2D = new int[10][];
+array2D[0] = 10;
+
+Lo correcto sería así:
+
+int[][] array2D = new int[10][]; // Declaración del arreglo bidimensional
+array2D[0] = new int[5];        // Inicializa la primera fila como un arreglo de tamaño 5
+array2D[0][0] = 10;             // Ahora puedes asignar valores individuales
+
+También se visualiza de manera incorrecta la siguiente:
+
+int[][] array2D = new int[10][]; // No se ha inicializado la submatriz
+array2D[0][0] = 10;
+
+Esto es correcto:
+
+int[][] array2D = new int[10][5];
+array2D[0][0] = 10;
+
+array2D = {
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0}
+};

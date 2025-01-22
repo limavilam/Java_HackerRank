@@ -55,3 +55,4 @@ for (int val = 1; val <= 10; val++) {
 }
 System.out.println("Sum of numbers 1..10 = " + sum); Respuesta_55
 
+For es conveniente para usar cuando el número de iteraciones es conocido.
