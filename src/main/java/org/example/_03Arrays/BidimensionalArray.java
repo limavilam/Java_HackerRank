@@ -18,22 +18,25 @@ public class BidimensionalArray {
                 sum += array2D[i][j];
             }
         }
-        System.out.println("Sum: " + sum);
+        System.out.println("Suma: " + sum);
 
         //Otra manera de hacerlo.
+
+        for (int[] row : array2D) {
+            for (int valor : row) {
+                System.out.print("|" + valor + "|");
+            }
+            System.out.println();
+        }
 
         int sumSecond = 0;
         for (int[]row : array2D) {
             for (int value : row) {
                 sumSecond = sumSecond + value;
+
             }
         }
-        for (int[] row : array2D) {
-            for (int value : row) {
-                System.out.print(value + " ");
-            }
-            System.out.println();
-        }
+
         System.out.println("sum = " + sum);
 
         /*

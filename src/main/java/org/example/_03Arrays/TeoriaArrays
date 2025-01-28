@@ -145,7 +145,7 @@ for (<type> <iteration variable> : <array>){
 }
 Detalles:
 Durante cada iteración del bucle se guarda una copia de valor de un elemento de matriz en su
-variable iterativa, el bucle ejcuta hasta que se han procesado todos los elementos del conjunto
+variable iterativa, el bucle ejecuta hasta que se han procesado todos los elementos del conjunto
 de datos, sin embargo es posible terminarlo con un break.
 Se utiliza exclusivamente para iterar a través de los valores y no para otras operaciones
 (por ejemplo, para eliminar o editar elementos de la matriz).
