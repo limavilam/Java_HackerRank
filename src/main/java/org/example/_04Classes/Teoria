@@ -1,0 +1,73 @@
+CLASES:
+Pueden ser consideradaas como esquemas, plantillas que describen varios objetos similares en el
+mundo real o virtual, ese conjunto de objetos debe tener el mismo conjunto de características
+(campos/propiedades).
+
+OBJETOS:
+Instancia de una clase. Cuando creamos un objeto, se considera el mecanismo para enseñarle a realizar
+varias operaciones.
+
+--UNA CLASE ES UNA DESCRIPCIÓN, UN OBJETO ES LA MATERIALIZACIÓN.
+--UNA CLASE ES UN TIPO ABSTRACTO DE DATO QUE DETERMINA LA FORMA Y EL COMPORTAMIENTO DE UN
+OBJETO CON LA AYUDA DE CAMPOS Y MÉTODOS.
+
+    CAMPOS: Son propiedades o atributos que representan el contenido y estado del objeto.
+    MÉTODOS: Son funciones que determinan el comportamiento del objeto.
+
+DEFINIR: Para definir una clase, se especifica la forma y el comportamiento (campos y métodos).
+
+[Access_Modifier] class Identifier [Type_Parameters]
+    [Super_Class] [Super_Interface] {
+    Class body
+ }
+
+ TIP: Una clase correctamente construida debe determinar una y solo una entidad lógica.
+
+ EJEMPLO:
+
+public class Car {
+    --Campos
+     private String model;
+     private int maxSpeed;
+     private int year;
+
+     --Constructor
+     public Car (String model, int year, int maxSpeed) {
+         this.model = model;
+         this.year = year;
+         this.maxSpeed = maxSpeed;
+     }
+
+     --Métodos
+     public int getMaxSpeed() {
+         return maxSpeed;
+     }
+ }
+
+ OOP PROPIEDADES Y PRINCIPIOS
+
+ Cinco propiedades de los objetos:
+ Objeto, Programa, Memoria, Tipo y Mensaje.
+
+ Principios:
+ H: Herencia: Es una propiedad que permite crear una nueva clase basada en una existente,
+    y en la que las propiedades de la clase principal se asignarán a la clase secundaria.
+ E: Encapsulamiento: Permite que los datos, y los métodos utilizados para trabajar con ellos,
+    se consoliden en una clase mientras oculta los detalles de la implementación
+    a los usuarios.
+ P: Polimorfismo: Es la capacidad de proporcionar una única interfaz a entidades de diferentes tipos.
+ A: Asbtracción
+
+ CAMPOS
+ Un campo es una declaración o descripción de una variable.
+
+ Variable Local: Se definen dentro de métodos, constructores o bloques. Se declaran e inicializan
+ en estas construcciones y se destruyen al salir de ellas.
+
+ Variable de Instancia: Se definen dentro de una clase, pero fuera de los métodos. Se inicializan
+ cuando se declara un objeto de clase. Estas variables están disponibles dentro de un método
+ de la instancia, constructor o bloque de la inicialización.
+
+ Variable de Clase: Se declaran en el cuerpo de clase fuera de un método utilizando
+ la palabra clave static. Se inicializan cuando se forma una clase y está disponible en todos
+ los métodos, constructores y bloques de la inicialización.
