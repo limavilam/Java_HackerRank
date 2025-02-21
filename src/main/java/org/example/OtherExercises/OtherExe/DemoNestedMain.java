@@ -1,4 +1,4 @@
-package org.example.OtherExercises;
+package org.example.OtherExercises.OtherExe;
 
 public class DemoNestedMain {
     public static void main(String[] args) {
